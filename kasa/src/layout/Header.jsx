@@ -4,7 +4,11 @@ const Header = () => {
 
   return (
     <div className="header">
-      HEADER
+      <div className='left'> Kasa </div>
+      <div className='right'>
+        <button> Accueil </button>
+        <button> A propos </button>
+      </div>
     </div>
   )
 }

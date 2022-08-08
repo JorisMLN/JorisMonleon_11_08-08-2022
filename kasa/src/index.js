@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-// import Home from './features/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './styles/index.scss';
+
 import reportWebVitals from './reportWebVitals';
 
 import HomeFrame from './features/HomeFrame';
@@ -9,7 +10,12 @@ import HomeFrame from './features/HomeFrame';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HomeFrame />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeFrame />} />
+        {/* <Route path="/reports" element={<MainFrame />} /> */}
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
