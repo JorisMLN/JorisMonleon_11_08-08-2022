@@ -1,6 +1,36 @@
-.homeFrame {
-  
-  .home{
-    border: 1px solid blue;
+@import '../styles/variables.scss';
+
+.home{
+  width: 90%;
+  height: 78vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: auto;
+
+  &__ban{
+    width: 1240px;
+    min-height: 223px;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  &__cardBloc{
+    max-width: 1240px;
+    border-radius: 25px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__card{
+      border: 1px solid blue;
+      width: 340px;
+      height: 340px;
+      margin: 35px;
+    }
   }
 }
