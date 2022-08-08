@@ -2,7 +2,7 @@ import WithHeaderAndFooter from "../layout/WithHeaderAndFooter";
 import Home from "./Home";
 
 
-function HomeFrame() {
+const HomeFrame = () => {
  
   return (
     <>

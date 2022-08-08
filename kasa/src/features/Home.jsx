@@ -1,7 +1,7 @@
 import './home.scss';
 import imageBan from '../assets/IMGban.png'
 
-function Home() {
+const Home = () => {
   return (
     <div className="home">
       <div className='home__ban'>
