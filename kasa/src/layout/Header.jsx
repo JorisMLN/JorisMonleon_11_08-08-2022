@@ -5,9 +5,14 @@ import vectorS from '../assets/VectorS.png';
 import vectorA from '../assets/VectorA.png';
 
 import { useNavigate } from "react-router-dom";
+// import { useEffect } from 'react';
 
 const Header = () => {
   const navigate = useNavigate();
+  
+  // useEffect(() => {
+   
+  // }, [])
 
   const toAbout = () => {
     navigate('/about')
@@ -16,6 +21,7 @@ const Header = () => {
   const toHome = () => {
     navigate('/')
   }
+ 
 
   return (
     <div className="header">

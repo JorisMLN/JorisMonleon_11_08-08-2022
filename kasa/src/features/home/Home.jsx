@@ -9,6 +9,7 @@ const Home = () => {
     <div className="home">
       <div className='home__ban'>
         <img className='vectorK' alt="kasa logo" src={imageBan}></img>
+        <p className='text'>Chez vous, partout et ailleurs</p>
       </div>
       <div className='home__cardBloc'>
         {dataMocked.map((elm, index) => <Card appart={elm} key={index}/>)}
