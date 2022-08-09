@@ -5,7 +5,8 @@ import './styles/index.scss';
 
 import reportWebVitals from './reportWebVitals';
 
-import HomeFrame from './features/HomeFrame';
+import HomeFrame from './layout/HomeFrame';
+import AboutFrame from './layout/AboutFrame';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeFrame />} />
-        {/* <Route path="/reports" element={<MainFrame />} /> */}
+        <Route path="/about" element={<AboutFrame />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

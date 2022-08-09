@@ -4,7 +4,18 @@ import vectorHome from '../assets/VectorHome.png';
 import vectorS from '../assets/VectorS.png';
 import vectorA from '../assets/VectorA.png';
 
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const navigate = useNavigate();
+
+  const toAbout = () => {
+    navigate('/about')
+  }
+
+  const toHome = () => {
+    navigate('/')
+  }
 
   return (
     <div className="header">
@@ -15,8 +26,8 @@ const Header = () => {
         <img className='vectorA' alt="kasa logo" src={vectorA}></img>
       </div>
       <div className='right'>
-        <button> Accueil </button>
-        <button> A propos </button>
+        <button onClick={toHome}> Accueil </button>
+        <button onClick={toAbout}> A propos </button>
       </div>
     </div>
   )
