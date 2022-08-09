@@ -11,7 +11,7 @@ const Card = ({appart}) => {
   return (
     <div className="card" onClick={toHouse}>
       <div className="card__main">
-        <img src={appart.pictures[0]}></img>
+        <img src={appart.cover}></img>
       </div>
       <div className="card__bot">
         {appart.title}
