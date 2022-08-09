@@ -7,10 +7,8 @@ import { useState } from 'react';
 const Value = ({value, index}) => {
   const [arrowIcon, setArrowIcon] = useState(false)
   
-
   const handleVisible = () => {
     const content =  document.getElementById(`valueContent${index}`);
-    
     if (content.classList.contains('hidden')){
       content.classList.replace('hidden', 'visible');
       setArrowIcon(true);
