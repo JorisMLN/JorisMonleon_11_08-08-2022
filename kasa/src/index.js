@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 import HomeFrame from './layout/HomeFrame';
 import AboutFrame from './layout/AboutFrame';
+import PageNotFoundFrame from './layout/PageNotFoundFrame';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<HomeFrame />} />
         <Route path="/about" element={<AboutFrame />} />
+        <Route path="*" element={<PageNotFoundFrame />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
