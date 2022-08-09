@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+
+.about{
+  width: 90%;
+  height: 78vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: auto;
+  scrollbar-color: $primary #f6f6f6;
+  scrollbar-width: thin;
+
+  &__ban{
+    width: 1240px;
+    min-height: 223px;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+
+    img{
+      filter: brightness(50%)
+    }
+  }
+
+  &__main{
+    // border: 1px solid red;
+    width: 70%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .value{
+      background-color: $primary;
+      border-radius: 5px;
+      margin: 5px;
+      width: 90%;
+      height: 47px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 18px;
+      padding-right: 18px;
+      font-size: 24px;
+
+    }
+
+    .hidden{
+      display: none;
+    }
+
+    .visible{
+      display: flex;
+      background-color: $secondary;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      padding-left: 18px;
+      padding-right: 18px;
+      font-size: 24px;
+      color: $primary;
+    }
+  }
+}

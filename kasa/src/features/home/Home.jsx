@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className='home__ban'>
-        <img className='vectorK' alt="kasa logo" src={imageBan}></img>
+        <img alt="kasa logo" src={imageBan}></img>
         <p className='text'>Chez vous, partout et ailleurs</p>
       </div>
       <div className='home__cardBloc'>
