@@ -1,5 +1,5 @@
-import WithHeaderAndFooter from "../layout/WithHeaderAndFooter";
-import Home from "./Home";
+import WithHeaderAndFooter from "./WithHeaderAndFooter"
+import Home from "../features/home/Home";
 
 
 const HomeFrame = () => {
