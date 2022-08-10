@@ -10,10 +10,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-
-    img{
-      width: 100%;
-    }
   }
 
   &__bot{
@@ -62,12 +58,6 @@
           font-size: 14px;
         }
       }
-
-      .rating{
-        border: 1px solid red;
-      }
-
-      
     }
 
     &--drop{

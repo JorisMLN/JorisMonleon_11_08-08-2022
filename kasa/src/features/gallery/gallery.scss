@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.gallery{
+  // border: 1px solid red;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  // justify-content: space-between;
+
+  #pictures{
+    min-width: 100%;
+  }
+
+  #leftArrow{
+    width: 47px;
+    height: 80px;
+    z-index: 20;
+    margin-right: -47px;
+  }
+
+  #rightArrow{
+    width: 47px;
+    height: 80px;
+    z-index: 20;
+    margin-left: -47px;
+  }
+}

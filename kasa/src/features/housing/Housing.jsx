@@ -1,37 +1,53 @@
 import './housing.scss';
-import { useNavigate } from "react-router-dom";
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+
 import arrowDown from '../../assets/arrowDown.png'
 import arrowUp from '../../assets/arrowUp.png'
-import { useState } from 'react';
+import fullStar from '../../assets/fullStar.png'
+import emptyStar from '../../assets/emptyStar.png'
+
+import Gallery from '../gallery/Gallery';
 
 import dataMocked from '../../mock/dataMocked.json'
 
 
 const Housing = () => {
   let params = useParams();
-  console.log(params.id)
   const houseFound = dataMocked.find(house => house.id === params.id)
-
-  const [arrowIconDescribe, setArrowIconDescribe] = useState(false)
-  const [arrowIconTools, setArrowIconTools] = useState(false)
+  const [arrowIconDescribe, setArrowIconDescribe] = useState(false);
+  const [arrowIconTools, setArrowIconTools] = useState(false);
   
   const handleVisible = (domId) => {
-    console.log('test')
     const content =  document.getElementById(domId);
+
     if (content.classList.contains('hidden')){
       content.classList.replace('hidden', 'visible');
-      domId === 'describeContent' ? setArrowIconDescribe(true) : setArrowIconTools(true)
+      domId === 'describeContent' ? setArrowIconDescribe(true) : setArrowIconTools(true);
     } else {
       content.classList.replace('visible', 'hidden');
-      domId === 'describeContent' ? setArrowIconDescribe(false) : setArrowIconTools(false)
+      domId === 'describeContent' ? setArrowIconDescribe(false) : setArrowIconTools(false);
     }
+  }
+
+  const ratingStar = () => {
+    let resultRating = [];
+
+    for(let star = 0; star < 5; star++){
+      if(star < houseFound.rating){
+        resultRating.push(<img src={fullStar}></img>);
+      } else {
+        resultRating.push(<img src={emptyStar}></img>)
+      }
+    }
+
+    return resultRating;
   }
 
   return (
     <div className="housing">
       <div className='housing__top'>
-        <img src={houseFound.pictures[0]}></img>
+        <Gallery images={houseFound.pictures} />
       </div>
       <div className='housing__bot'>
         <div className='housing__bot--name'>
@@ -40,10 +56,10 @@ const Housing = () => {
         </div>
         <div className='housing__bot--tagsAndRate'>
           <div className='tags'>
-            {houseFound.tags.map(tag => <div className='tag'> {tag} </div>)}
+            {houseFound.tags.map((tag, index) => <div className='tag' key={index}> {tag} </div>)}
           </div>
           <div className='rating'>
-            {houseFound.rating}
+            {ratingStar()}
           </div>
         </div>
         <div className='housing__bot--drop'>
@@ -65,7 +81,6 @@ const Housing = () => {
               {houseFound.equipments}
             </div>
           </div>
-          
         </div>
       </div>
     </div>
