@@ -35,9 +35,9 @@ const Housing = () => {
 
     for(let star = 0; star < 5; star++){
       if(star < houseFound.rating){
-        resultRating.push(<img src={fullStar}></img>);
+        resultRating.push(<img src={fullStar} key={star}></img>);
       } else {
-        resultRating.push(<img src={emptyStar}></img>)
+        resultRating.push(<img src={emptyStar} key={star}></img>)
       }
     }
 
@@ -78,7 +78,7 @@ const Housing = () => {
               <img src={arrowIconTools ? arrowUp : arrowDown}></img> 
             </div>
             <div id='toolsContent' className='hidden'>
-              {houseFound.equipments}
+              {houseFound.equipments.map((tool, index) => <div key={index}>{tool}</div>)}
             </div>
           </div>
         </div>

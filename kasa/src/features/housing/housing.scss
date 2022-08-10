@@ -87,6 +87,9 @@
           height: 249px;
           background-color: $secondary;
           color: $primary;
+          padding-top: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
         }
       }
 
@@ -111,8 +114,10 @@
           background-color: $secondary;
           color: $primary;
           padding: 2px;
+          padding-top: 20px;
+          padding-left: 20px;
+          flex-direction: column;
         } 
-
       }
     }
   }
