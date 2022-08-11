@@ -5,23 +5,33 @@ import vectorS from '../assets/VectorS.png';
 import vectorA from '../assets/VectorA.png';
 
 import { useNavigate } from "react-router-dom";
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const Header = () => {
   const navigate = useNavigate();
   
-  // useEffect(() => {
-   
-  // }, [])
-
+  // Navigation
   const toAbout = () => {
     navigate('/about')
   }
-
   const toHome = () => {
     navigate('/')
   }
- 
+
+  // underline manager
+  useEffect(() => {
+    const actualPath = document.location.href;
+
+    if(actualPath === 'http://localhost:3000/'){
+      const homeBtn = document.getElementById('homeBtn');
+      homeBtn.style.textDecoration = 'underline';
+    }
+
+    if(actualPath === 'http://localhost:3000/about'){
+      const aboutBtn = document.getElementById('aboutBtn');
+      aboutBtn.style.textDecoration = 'underline';
+    }
+  }, [])
 
   return (
     <div className="header">
@@ -32,8 +42,8 @@ const Header = () => {
         <img className='vectorA' alt="kasa logo" src={vectorA}></img>
       </div>
       <div className='right'>
-        <button onClick={toHome}> Accueil </button>
-        <button onClick={toAbout}> A propos </button>
+        <button id='homeBtn' onClick={toHome}> Accueil </button>
+        <button id='aboutBtn' onClick={toAbout}> A propos </button>
       </div>
     </div>
   )
