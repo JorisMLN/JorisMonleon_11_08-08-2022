@@ -19,11 +19,11 @@ const Housing = () => {
   const handleVisible = (domId) => {
     const content =  document.getElementById(domId);
 
-    if (content.classList.contains('hidden')){
-      content.classList.replace('hidden', 'visible');
+    if (content.classList.contains('hiddenHousing')){
+      content.classList.replace('hiddenHousing', 'visibleHousing');
       domId === 'describeContent' ? setArrowIconDescribe(true) : setArrowIconTools(true);
     } else {
-      content.classList.replace('visible', 'hidden');
+      content.classList.replace('visibleHousing', 'hiddenHousing');
       domId === 'describeContent' ? setArrowIconDescribe(false) : setArrowIconTools(false);
     }
   }
@@ -66,7 +66,7 @@ const Housing = () => {
               <div> Description </div>
               <img src={arrowIconDescribe ? arrowUp : arrowDown}></img> 
             </div>
-            <div id='describeContent' className='hidden'>
+            <div id='describeContent' className='hiddenHousing'>
               {houseFound.description}
             </div>
           </div>
@@ -75,7 +75,7 @@ const Housing = () => {
               <div> Equipements </div>
               <img src={arrowIconTools ? arrowUp : arrowDown}></img> 
             </div>
-            <div id='toolsContent' className='hidden'>
+            <div id='toolsContent' className='hiddenHousing'>
               {houseFound.equipments.map((tool, index) => <div key={index}>{tool}</div>)}
             </div>
           </div>
