@@ -59,18 +59,18 @@ const Housing = () => {
             <div className='tags'>
               {houseFound.tags.map((tag, index) => <div className='tag' key={index}> {tag} </div>)}
             </div>
-            
           </div>
 
           <div className='userAndRate'>
             <div className='user'>
-              <div className='user__name'> Alexandre Dumas </div>
-              <div className='user__pp'></div>
+              <div className='user__name'>{houseFound.host.name}</div>
+              <div className='user__pp'>
+                <img src={houseFound.host.picture}></img>
+              </div>
             </div>
             <div className='rating'>
               {ratingStar()}
             </div>
-           
           </div>
         </div>
 

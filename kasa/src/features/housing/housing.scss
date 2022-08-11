@@ -79,18 +79,21 @@
             color: $primary;
           }
           &__pp{
-            border: 1px soldi #C4C4C4;
-            background-color: #C4C4C4;
             border-radius: 100px;
             width: 64px;
             height: 64px;
+            overflow: hidden;
+
+            img{
+              width: 70px;
+            }
           }
         }
         .rating{
           .star{
             width: 30px;
             height: 30px;
-            margin-right: 10px;
+            margin-right: 5px;
           }
         }
       }
@@ -105,6 +108,7 @@
 
       .describe{
         width: 48%;
+        height: 100%;
 
         &__top{
           display: flex;
@@ -120,12 +124,14 @@
         }
 
         #describeContent{
-          height: 249px;
+          min-height: 100px;
           background-color: $secondary;
           color: $primary;
           padding-top: 20px;
+          padding-bottom: 10px;
           padding-left: 20px;
           padding-right: 20px;
+          border-radius: 10px;
         }
       }
 
@@ -146,13 +152,15 @@
         } 
 
         #toolsContent{
-          height: 249px;
+          min-height: 100px;
           background-color: $secondary;
           color: $primary;
           padding: 2px;
           padding-top: 20px;
+          padding-bottom: 10px;
           padding-left: 20px;
           flex-direction: column;
+          border-radius: 10px;
         } 
       }
     }
@@ -265,11 +273,14 @@
               font-size: 12px;
             }
             &__pp{
-              border: 1px soldi #C4C4C4;
-              background-color: #C4C4C4;
               border-radius: 100px;
               width: 32px;
               height: 32px;
+              overflow: hidden;
+
+              img{
+                width: 35px;
+              }
             }
           }
           .rating{
