@@ -124,7 +124,6 @@
         }
 
         #describeContent{
-          min-height: 100px;
           background-color: $secondary;
           color: $primary;
           padding-top: 20px;
@@ -132,6 +131,8 @@
           padding-left: 20px;
           padding-right: 20px;
           border-radius: 10px;
+          min-height: 40px;
+          max-height: 130px;
         }
       }
 
@@ -160,7 +161,10 @@
           padding-bottom: 10px;
           padding-left: 20px;
           flex-direction: column;
+          flex-wrap: wrap;
           border-radius: 10px;
+          min-height: 40px;
+          max-height: 130px;
         } 
       }
     }
