@@ -1,4 +1,4 @@
-import './about.scss';
+import './value.scss';
 import arrowDown from '../../assets/arrowDown.png'
 import arrowUp from '../../assets/arrowUp.png'
 import { useState } from 'react';

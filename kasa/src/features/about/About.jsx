@@ -1,11 +1,10 @@
 import './about.scss';
 import mountains from '../../assets/mountains.png'
-import Value from './value'
+import Value from '../value/Value'
 
 import valuesMocked from '../../mock/valuesMocked.json'
 
 const About = () => {
-
   return (
     <div className="about">
       <div className='about__ban'>

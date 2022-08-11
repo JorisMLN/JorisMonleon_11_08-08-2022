@@ -2,13 +2,12 @@ import './housing.scss';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
-import arrowDown from '../../assets/arrowDown.png'
-import arrowUp from '../../assets/arrowUp.png'
-import fullStar from '../../assets/fullStar.png'
-import emptyStar from '../../assets/emptyStar.png'
+import arrowDown from '../../assets/arrowDown.png';
+import arrowUp from '../../assets/arrowUp.png';
 
+import dataMocked from '../../mock/dataMocked.json';
+import RatingStar from '../ratingStar/RatingStar';
 import Gallery from '../gallery/Gallery';
-import dataMocked from '../../mock/dataMocked.json'
 
 
 const Housing = () => {
@@ -27,19 +26,6 @@ const Housing = () => {
       content.classList.replace('visible', 'hidden');
       domId === 'describeContent' ? setArrowIconDescribe(false) : setArrowIconTools(false);
     }
-  }
-
-  const ratingStar = () => {
-    let resultRating = [];
-
-    for(let star = 0; star < 5; star++){
-      if(star < houseFound.rating){
-        resultRating.push(<img className='star' src={fullStar} key={star}></img>);
-      } else {
-        resultRating.push(<img className='star' src={emptyStar} key={star}></img>)
-      }
-    }
-    return resultRating;
   }
 
   return (
@@ -69,7 +55,7 @@ const Housing = () => {
               </div>
             </div>
             <div className='rating'>
-              {ratingStar()}
+              <RatingStar houseFound={houseFound}/>
             </div>
           </div>
         </div>

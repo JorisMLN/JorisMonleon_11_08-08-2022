@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+
+.value{
+  background-color: $primary;
+  border-radius: 5px;
+  margin: 5px;
+  width: 90%;
+  height: 47px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 24px;
+}
+
+.hidden{
+  display: none;
+}
+
+.visible{
+  display: flex;
+  background-color: $secondary;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 24px;
+  color: $primary;
+}
+
+
+// responsive mobile //
+@media screen and (max-width: 500px){
+  
+  .value{
+    background-color: $primary;
+    border-radius: 5px;
+    margin: 5px;
+    width: 90%;
+    height: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 13px;
+
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .visible{
+    display: flex;
+    background-color: $secondary;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 12px;
+    color: $primary;
+  }
+}
