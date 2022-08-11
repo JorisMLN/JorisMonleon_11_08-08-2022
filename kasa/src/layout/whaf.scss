@@ -69,3 +69,56 @@
     align-items: center;
   }
 }
+
+// responsive mobile //
+@media screen and (max-width: 500px){
+  .whafCapsule{
+    .header{
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .left{
+        padding-left: 10px;
+        width: 150px;
+        .vectorK{
+          width: 37px;
+          height: 43px;
+        }
+  
+        .vectorHome{
+          width: 31px;
+          height: 36px;
+        }
+  
+        .vectorS{
+          width: 27px;
+          height: 33px;
+        }
+  
+        .vectorA{
+          width: 28px;
+          height: 33px;
+        }
+      }
+  
+      .right{
+        width: 120px;
+        margin-right: 10px;
+  
+        button{
+          border: none;
+          background-color: white;
+          color: $primary;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .footer{
+      height: 100px;
+    }
+  }
+}

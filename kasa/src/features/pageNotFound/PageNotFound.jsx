@@ -10,11 +10,13 @@ const PageNotFound = () => {
 
   return (
     <div className="pageNotFound">
-      <div className="pageNotFound__404">
-        404
-      </div>
-      <div className="pageNotFound__oups">
-        Oups! La page que vous demandez n'existe pas.
+      <div className="pageNotFound__top">
+        <div className="e404">
+          404
+        </div>
+        <div className="oups">
+          Oups! La page que vous demandez n'existe pas.
+        </div>
       </div>
       <div className="pageNotFound__back" onClick={back}>
         Retourner sur la page d'accueil

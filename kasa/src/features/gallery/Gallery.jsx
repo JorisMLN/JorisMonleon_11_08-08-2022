@@ -2,10 +2,18 @@ import { useState } from 'react';
 import './gallery.scss';
 import arrowRight from '../../assets/arrowRight.png';
 import arrowLeft from '../../assets/arrowLeft.png';
+import { useEffect } from 'react';
 
 
 const Gallery = ({images}) => {
   const [imageSrcValue, setImageSrcValue] = useState(images[0]);
+  const [isMultipleImages, setIsMultipleImage] = useState(true);
+
+  useEffect(() => {
+    if(images.length === 1){
+      setIsMultipleImage(false);
+    }
+  })
 
   const left = () => {
     let imageSource = document.getElementById('pictures').attributes.src;
@@ -31,9 +39,9 @@ const Gallery = ({images}) => {
 
   return (
     <div className="gallery">
-      <img id='leftArrow' src={arrowLeft} onClick={left}></img>
+      {isMultipleImages ? <img id='leftArrow' src={arrowLeft} onClick={left}></img> : null}
       <img id='pictures' src={imageSrcValue}></img>
-      <img id='rightArrow' src={arrowRight} onClick={right}></img>
+      {isMultipleImages ? <img id='rightArrow' src={arrowRight} onClick={right}></img> : null}
     </div>
   );
 }

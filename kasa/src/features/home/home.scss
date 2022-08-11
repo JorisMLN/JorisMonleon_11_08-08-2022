@@ -43,3 +43,40 @@
     flex-wrap: wrap;
   }
 }
+
+// responsive mobile //
+@media screen and (max-width: 500px){
+  .home{
+    overflow-x: hidden;
+    
+    &__ban{
+      width: 100%;
+      min-height: 111px;
+      border-radius: 15px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+  
+      img{
+        filter: brightness(50%)
+      }
+  
+      .text{
+        z-index: 30;
+        color: white;
+        position: absolute;
+        top: 0%;
+        left: 10%;
+        width: 55%;
+        font-size: 24px;
+      }
+    }
+  
+    &__cardBloc{
+      background-color: white;
+    }
+  }
+}

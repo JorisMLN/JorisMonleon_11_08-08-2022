@@ -1,29 +1,70 @@
 @import '../../styles/variables.scss';
 
 .pageNotFound{
-  // border: 1px solid red;
-
   width: 90%;
   height: 70%;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 
-  &__404{
-    font-size: 288px;
-    color: $primary;
-  }
+  
+  &__top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
 
-  &__oups{
-    font-size: 36px;
-    color: $primary;
+    .e404{
+      font-size: 288px;
+      color: $primary;
+    }
+  
+    .oups{
+      font-size: 36px;
+      color: $primary;
+    }
   }
 
   &__back{
     font-size: 18px;
     color: $primary;
     text-decoration: underline;
+  }
+}
+
+// responsive mobile //
+@media screen and (max-width: 500px){
+  .pageNotFound{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    &__top{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .e404{
+        font-size: 96px;
+        color: $primary;
+      }
+    
+      .oups{
+        width: 55%;
+        font-size: 18px;
+        color: $primary;
+      }
+    }
+  
+    &__back{
+      font-size: 14px;
+      color: $primary;
+      text-decoration: underline;
+    }
   }
 }

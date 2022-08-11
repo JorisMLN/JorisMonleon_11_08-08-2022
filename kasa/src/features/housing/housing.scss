@@ -16,46 +16,82 @@
     width: 100%;
     height: 500px;
 
-    &--name{
-      width: 100%;
-      height: 70px;
-
-      h1{
-        margin: 0;
-        font-size: 36px;
-        color: $primary;
-      }
-
-      p{
-        color: $primary;
-        margin: 0;
-      }
-    }
-
-    &--tagsAndRate{
-      width: 100%;
-      height: 30px;
+    &--info{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .tags{
+      height: 120px;
+      .nameAndTags{
+        width: 85%;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        .tag{
+        flex-direction: column;
+        justify-content: space-between;
+
+        .name{
+          width: 100%;
+          height: 70px;
+            
+          h1{
+            margin: 0;
+            font-size: 36px;
+            color: $primary;
+          }
+    
+          p{
+            color: $primary;
+            margin: 0;
+          }
+        }
+        .tags{
           display: flex;
-          justify-content: space-around;
           align-items: center;
-          border-radius: 10px;
-          min-width: 115px;
-          height: 25px;
-          color: white;
-          background-color: $primary;
-          margin-right: 10px;
-          padding-left: 3px;
-          padding-right: 3px;
-          font-size: 14px;
+          .tag{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            border-radius: 10px;
+            min-width: 115px;
+            height: 25px;
+            color: white;
+            background-color: $primary;
+            margin-right: 10px;
+            padding-left: 3px;
+            padding-right: 3px;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .userAndRate{
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .user{
+          width: 90%;
+          height: 55%;
+
+          display: flex;
+          &__name{
+            display: flex;
+            align-items: center;
+            width: 60%;
+            color: $primary;
+          }
+          &__pp{
+            border: 1px soldi #C4C4C4;
+            background-color: #C4C4C4;
+            border-radius: 100px;
+            width: 64px;
+            height: 64px;
+          }
+        }
+        .rating{
+          .star{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+          }
         }
       }
     }
@@ -129,4 +165,187 @@
 
 .visible{
   display: flex;
+}
+
+
+// responsive mobile //
+@media screen and (max-width: 500px){
+  .housing{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  
+    &__top{
+      width: 90%;
+      height: 225px;
+      overflow: hidden;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__bot{
+      width: 90%;
+      margin-top: 10px;
+  
+      &--info{
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+
+        .nameAndTags{
+          width: 100%;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+  
+          .name{
+            width: 100%;
+            height: 70px;
+              
+            h1{
+              margin: 0;
+              font-size: 18px;
+              color: $primary;
+            }
+      
+            p{
+              color: $primary;
+              margin: 0;
+              font-size: 14px;
+            }
+          }
+
+          .tags{
+            // border: 1px solid red;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+            .tag{
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+  
+              border-radius: 5px;
+              min-width: 84px;
+              height: 18px;
+              color: white;
+              background-color: $primary;
+              margin-right: 10px;
+              padding-left: 3px;
+              padding-right: 3px;
+              margin-bottom: 2px;
+              font-size: 10px;
+            }
+          }
+        }
+  
+        .userAndRate{
+          width: 100%;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+          height: 50px;
+          .user{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            &__name{
+              display: flex;
+              align-items: center;
+              width: 60%;
+              font-size: 12px;
+            }
+            &__pp{
+              border: 1px soldi #C4C4C4;
+              background-color: #C4C4C4;
+              border-radius: 100px;
+              width: 32px;
+              height: 32px;
+            }
+          }
+          .rating{
+            .star{
+              width: 15px;
+              height: 15px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+  
+      &--drop{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: 10px;
+  
+        .describe{
+          width: 100%;
+          margin-bottom: 10px;
+  
+          &__top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+            border-radius: 5px;
+            background-color: $primary;
+            color: white;
+            padding-left: 12px;
+            padding-right: 12px;
+            font-size: 13px;
+          }
+  
+          #describeContent{
+            max-height: 100px;
+            background-color: $secondary;
+            color: $primary;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 12px;
+          }
+        }
+  
+        .tools{
+          width: 100%;
+  
+          &__top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+            border-radius: 5px;
+            background-color: $primary;
+            color: white;
+            padding-left: 12px;
+            padding-right: 12px;
+            font-size: 13px;
+          } 
+  
+          #toolsContent{
+            max-height: 100px;
+            background-color: $secondary;
+            color: $primary;
+            padding: 2px;
+            padding-top: 20px;
+            padding-left: 20px;
+            flex-direction: column;
+            font-size: 12px;
+          } 
+        }
+      }
+    }
+  }
 }

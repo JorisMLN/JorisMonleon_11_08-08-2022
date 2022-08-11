@@ -30,3 +30,10 @@
     color: white;
   }
 }
+
+// responsive mobile //
+@media screen and (max-width: 500px){
+  .card{
+    margin: 15px;
+  }
+}
