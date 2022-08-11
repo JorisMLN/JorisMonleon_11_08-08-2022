@@ -83,6 +83,7 @@
             width: 64px;
             height: 64px;
             overflow: hidden;
+            box-shadow: 2px ;
 
             img{
               width: 70px;
@@ -108,7 +109,6 @@
 
       .describe{
         width: 48%;
-        height: 100%;
 
         &__top{
           display: flex;
@@ -322,7 +322,7 @@
             max-height: 100px;
             background-color: $secondary;
             color: $primary;
-            padding-top: 20px;
+            padding-top: 5px;
             padding-left: 20px;
             padding-right: 20px;
             font-size: 12px;
@@ -331,6 +331,7 @@
   
         .tools{
           width: 100%;
+          height: none;
   
           &__top{
             display: flex;
@@ -350,7 +351,7 @@
             background-color: $secondary;
             color: $primary;
             padding: 2px;
-            padding-top: 20px;
+            padding-top: 5px;
             padding-left: 20px;
             flex-direction: column;
             font-size: 12px;

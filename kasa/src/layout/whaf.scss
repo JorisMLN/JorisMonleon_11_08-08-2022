@@ -9,43 +9,46 @@
   align-items: center;
 
   .header{
-    width: 100%;
+    width: 1240px;
     height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .left{
-      width: 300px;
+      width: 200px;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items:flex-end;
       color: $primary;
 
       .vectorK{
         width: 54px;
         height: 62px;
+        margin-right: 7px;
       }
 
       .vectorHome{
         width: 46px;
         height: 53px;
+        margin-right: 7px;
       }
 
       .vectorS{
         width: 39px;
         height: 48px;
+        margin-right: 7px;
       }
 
       .vectorA{
         width: 40px;
         height: 48px;
+        margin-right: 7px;
       }
     }
 
     .right{
       width: 230px;
-      margin-right: 100px;
       display: flex;
       justify-content: space-between;
 
@@ -75,14 +78,16 @@
   .whafCapsule{
     .header{
       height: 10vh;
-      width: 100%;
+      width: 92%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-left: 10px;
   
       .left{
         padding-left: 10px;
         width: 150px;
+
         .vectorK{
           width: 37px;
           height: 43px;
