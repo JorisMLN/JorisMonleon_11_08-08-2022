@@ -295,62 +295,6 @@
         flex-direction: column;
         margin-top: 10px;
   
-        .describe{
-          width: 100%;
-          margin-bottom: 10px;
-  
-          &__top{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 30px;
-            border-radius: 5px;
-            background-color: $primary;
-            color: white;
-            padding-left: 12px;
-            padding-right: 12px;
-            font-size: 13px;
-          }
-  
-          #describeContent{
-            max-height: 100px;
-            background-color: $secondary;
-            color: $primary;
-            padding-top: 5px;
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 12px;
-          }
-        }
-  
-        .tools{
-          width: 100%;
-          height: none;
-  
-          &__top{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 30px;
-            border-radius: 5px;
-            background-color: $primary;
-            color: white;
-            padding-left: 12px;
-            padding-right: 12px;
-            font-size: 13px;
-          } 
-  
-          #toolsContent{
-            max-height: 100px;
-            background-color: $secondary;
-            color: $primary;
-            padding: 2px;
-            padding-top: 5px;
-            padding-left: 20px;
-            flex-direction: column;
-            font-size: 12px;
-          } 
-        }
       }
     }
   }
