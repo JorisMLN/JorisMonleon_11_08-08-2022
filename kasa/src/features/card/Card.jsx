@@ -12,9 +12,7 @@ const Card = ({appart}) => {
     <div className="card" onClick={toHouse}>
       <div className="card__main">
         <img src={appart.cover}></img>
-      </div>
-      <div className="card__bot">
-        {appart.title}
+        <h2>{appart.title}</h2>
       </div>
     </div>
   )
