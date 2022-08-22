@@ -2,15 +2,10 @@
 
 .home{
   width: 90%;
-  height: 78vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  overflow: auto;
-  scrollbar-color: $primary #f6f6f6;
-  scrollbar-width: thin;
 
   &__ban{
     width: 1240px;
@@ -47,11 +42,12 @@
 // responsive mobile //
 @media screen and (max-width: 500px){
   .home{
-    overflow-x: hidden;
+    // overflow-x: hidden;
     
     &__ban{
       width: 100%;
       min-height: 111px;
+      max-height: 112px;
       border-radius: 15px;
       margin-top: 10px;
       margin-bottom: 30px;

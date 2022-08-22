@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <div className="footer">
-      <div>
+      <div className="footer__logo">
         <img className='vectorK' src={VertorKwhite}></img>
         <img className='vectorHome' src={VertorHomewhite}></img>
         <img className='vectorS' src={VertorSwhite}></img>
