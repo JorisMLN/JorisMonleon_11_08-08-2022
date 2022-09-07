@@ -31,6 +31,10 @@
       margin-left: 15px;
     }
   }
+
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 // responsive mobile //
@@ -39,5 +43,9 @@
     margin: 15px;
     height: 255px;
     width: 335px;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
 }

@@ -17,6 +17,10 @@
     height: 80px;
     margin-right: -47px;
     z-index: 20;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
 
   #rightArrow{
@@ -24,6 +28,10 @@
     height: 80px;
     margin-left: -47px;
     z-index: 20;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
 
