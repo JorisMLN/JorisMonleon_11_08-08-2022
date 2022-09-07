@@ -1,6 +1,5 @@
 import './housing.scss';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useState } from 'react';
 
 import dataMocked from '../../mock/dataMocked.json';
 import RatingStar from '../ratingStar/RatingStar';
@@ -9,12 +8,17 @@ import DropDown from '../dropDown/DropDown';
 
 
 const Housing = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   let params = useParams();
   const theHouse = dataMocked.find(house => house.id === params.id);
-
   console.log(theHouse);
+
+  if(theHouse === undefined){
+    console.log('test undefined')
+    navigate('/badId')
+  }
+
 
   return (
     <>

@@ -17,6 +17,7 @@ root.render(
         <Route path="/" element={<HomeFrame />} />
         <Route path="/about" element={<AboutFrame />} />
         <Route path="/housing/:id" element={<HousingFrame />} />
+        <Route path="/badId" element={<PageNotFoundFrame />} />
         <Route path="*" element={<PageNotFoundFrame />} />
       </Routes>
     </BrowserRouter>
