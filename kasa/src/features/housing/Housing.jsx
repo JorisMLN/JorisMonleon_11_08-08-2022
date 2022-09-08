@@ -1,27 +1,31 @@
 import './housing.scss';
 import { useNavigate, useParams } from 'react-router-dom';
+import { getDataToLocation } from '../../api/apiServicesFunction';
 
-import dataMocked from '../../mock/dataMocked.json';
 import RatingStar from '../ratingStar/RatingStar';
 import Gallery from '../gallery/Gallery';
 import DropDown from '../dropDown/DropDown';
+import { useEffect } from 'react';
 
 
 const Housing = () => {
   const navigate = useNavigate();
+  const params = useParams();
+  const theHouse = getDataToLocation(params.id)
 
-  let params = useParams();
-  const theHouse = dataMocked.find(house => house.id === params.id);
-  console.log(theHouse);
-
-  if(theHouse === undefined){
-    console.log('test undefined')
-    navigate('/badId')
-  }
-
+  useEffect(() => {
+    if(theHouse === false){
+      console.log('test undefined false')
+      navigate('/badId')
+    }
+  })
 
   return (
     <>
+      {
+      theHouse === false ?
+      null
+      :
       <div className="housing">
         <div className='housing__top'>
           <Gallery images={theHouse.pictures} />
@@ -61,6 +65,7 @@ const Housing = () => {
           </div>
         </div>
       </div>
+      }
     </>
   )
 }

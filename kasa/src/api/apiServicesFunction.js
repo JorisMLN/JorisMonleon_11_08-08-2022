@@ -1,3 +1,5 @@
+// --- --- --- --- --- A P I --- --- --- --- --- //
+
 import dataMocked from '../mock/dataMocked.json';
 import valuesMocked from '../mock/valuesMocked.json';
 
@@ -6,9 +8,15 @@ export const getDataToCard = () => {
   return dataCard;
 };
 
-export const getDataToLocation = () => {
-  const dataHouse = dataMocked;
-  return dataHouse;
+export const getDataToLocation = (_id) => {
+  const theHouse = dataMocked.find(house => house.id === _id);
+  console.log(theHouse);
+
+  if (theHouse === undefined) {
+    console.log('test undefined')
+    return false;
+  }
+  return theHouse;
 }
 
 export const getImages = () => {
