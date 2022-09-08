@@ -5,10 +5,10 @@ import valuesMocked from '../mock/valuesMocked.json';
 
 // -----------------------------------------------------------------//
 // Data of all houses
-// export const getDataToCard = () => {
-//   const dataCard = dataMocked;
-//   return dataCard;
-// };
+export const getDataToCard = () => {
+  const dataCard = dataMocked;
+  return dataCard;
+};
 
 // -----------------------------------------------------------------//
 // Find the data of the selected house
