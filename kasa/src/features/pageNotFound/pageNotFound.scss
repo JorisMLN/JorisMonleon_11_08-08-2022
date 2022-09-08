@@ -30,6 +30,10 @@
     font-size: 18px;
     color: $primary;
     text-decoration: underline;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
 

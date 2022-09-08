@@ -17,7 +17,7 @@ const Housing = () => {
   useEffect(() => {
     if(theHouse === false){
       console.log('test undefined false')
-      navigate('/badId')
+      navigate('/*')
     }
   })
 
