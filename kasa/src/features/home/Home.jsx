@@ -1,7 +1,5 @@
 import '../home/home.scss';
 import imageBan from '../../assets/IMGban.png'
-// import Footer from '../../layout/Footer';
-
 import Card from '../card/Card';
 import dataMocked from '../../mock/dataMocked.json'
 
@@ -15,7 +13,6 @@ const Home = () => {
       <div className='home__cardBloc'>
         {dataMocked.map((elm, index) => <Card appart={elm} key={index}/>)}
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }
