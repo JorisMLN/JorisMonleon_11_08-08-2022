@@ -29,7 +29,7 @@ const Housing = () => {
         :
         <div className="housing">
           <div className='housing__top'>
-            <Gallery />
+            <Gallery images={theHouse.pictures}/>
           </div>
 
           <div className='housing__bot'>
@@ -58,8 +58,8 @@ const Housing = () => {
             </div>
 
             <div className='housing__bot--drop'>
-              <DropDown title={'Description'} />
-              <DropDown title={'Equipements'} />
+              <DropDown title={'Description'} content={theHouse.description} size={'small'}/>
+              <DropDown title={'Equipements'} content={theHouse.equipments} size={'small'}/>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import './about.scss';
 import mountains from '../../assets/mountains.png';
-import Value from '../value/Value';
 import { getAboutValues } from '../../api/apiServicesFunction';
+import DropDown from '../dropDown/DropDown';
 
 const About = () => {
 
@@ -13,7 +13,10 @@ const About = () => {
         <img alt="kasa logo" src={mountains}></img>
       </div>
       <div className='about__main'>
-        {AboutValues.map((value, index) => <Value value={value} index={index} key={index}/>)}
+        <DropDown title={'Fiabilité'} content={AboutValues[0].text} size={'large'}/>
+        <DropDown title={'Respect'} content={AboutValues[1].text} size={'large'}/>
+        <DropDown title={'Service'} content={AboutValues[2].text} size={'large'}/>
+        <DropDown title={'Sécurité'} content={AboutValues[3].text} size={'large'}/>
       </div>
     </div>
   )

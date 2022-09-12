@@ -1,18 +1,15 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getImages } from '../../api/apiServicesFunction';
+// import { getImages } from '../../api/apiServicesFunction';
+
 import './gallery.scss';
 import arrowRight from '../../assets/arrowRight.png';
 import arrowLeft from '../../assets/arrowLeft.png';
 
 
 
-const Gallery = () => {
-  const params = useParams();
-
-  // appel API
-  const images = getImages(params.id);
+const Gallery = ({images}) => {
 
   const [imageSrcValue, setImageSrcValue] = useState(images[0]);
   const [isMultipleImages, setIsMultipleImage] = useState(true);
