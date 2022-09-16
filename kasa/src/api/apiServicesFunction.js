@@ -14,8 +14,6 @@ export const getDataToCard = () => {
 // Find the data of the selected house
 export const getDataToLocation = (_id) => {
   const theHouse = dataMocked.find(house => house.id === _id);
-  console.log(theHouse);
-
   if (theHouse === undefined) {
     console.log('test undefined')
     return false;
